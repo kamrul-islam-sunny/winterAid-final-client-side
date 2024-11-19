@@ -1,0 +1,37 @@
+import React from "react";
+import Slider from "./Slider";
+
+const Banner = () => {
+  return (
+    <div className="flex flex-col md:flex-row gap-4 lg:py-12 py-8 px-4 ">
+      {/* banner content */}
+      <div className="flex flex-col justify-center text-center md:text-start lg:space-y-4 space-y-1 md:pr-6">
+        <h1 className="lg:text-5xl md:text-4xl text-3xl leading-tight  font-bold text-slate-800">
+          Wrap Someone <br /> in Warmth This{" "}
+          <span className="text-sky-500">Winter</span>
+        </h1>
+        <p className="md:text-base text-sm font-medium leading-6 text-slate-700">
+          This winter, many face the cold without warm clothing. Your donation
+          of a coat, blanket, or gloves can bring hope and comfort. Together,
+          let’s share warmth and transform lives—one gift at a time.
+        </p>
+        <p className="font-Playfair md:text-lg text-sm font-black italic">
+          "The believer’s shade on the Day of Resurrection will be his charity"
+          <div className="br"></div>
+          <span className="font-medium">(Al-Tirmidhi)</span>
+        </p>
+        <div className="">
+          <button className="btn bg-sky-500 text-white text-lg font-medium">
+            Donate now
+          </button>
+        </div>
+      </div>
+      {/* banner slider */}
+      <div className="md:w-1/2 w-full">
+        <Slider></Slider>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
