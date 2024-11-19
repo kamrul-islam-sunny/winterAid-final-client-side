@@ -1,19 +1,37 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/Provider';
+import toast from 'react-hot-toast';
+import { FcGoogle } from "react-icons/fc";
 
 
 const Login = () => {
-    const {userLogin} = useContext(AuthContext)
+    const {userLogin, userGoogleLogin} = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+
     const handleForm = (e) =>{
         e.preventDefault();
         const email = e.target.email.value
         const password = e.target.password.value
         userLogin(email, password)
         .then(result =>{
+            navigate(location?.state ? location.state : '/')
             console.log(result.user)
         })
         .catch(err =>{
+            toast.error(err.message)
+            console.log(err.message)
+        })
+    }
+    const handleGoogleSignIn = ()=>{
+        userGoogleLogin()
+        .then(result =>{
+            navigate(location?.state ? location.state : '/')
+            console.log(result.user)
+        })
+        .catch(err =>{
+            toast.error(err.message)
             console.log(err.message)
         })
     }
@@ -65,6 +83,7 @@ const Login = () => {
               Register
             </Link>
           </h2>
+            <button onClick={handleGoogleSignIn} className='btn w-56 mx-auto mt-4'><span className='text-2xl'><FcGoogle/></span> login with Google</button>
         </div>
       </div>
     );

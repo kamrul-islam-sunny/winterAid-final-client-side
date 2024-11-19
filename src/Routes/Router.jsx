@@ -6,6 +6,7 @@ import Details from "../Pages/Details";
 import DonateForm from "../Pages/DonateForm";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
+import Private from "../private/Private";
 
 const router = createBrowserRouter([
   {
@@ -23,17 +24,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/donation-campaigns",
-        element: <Donations></Donations>,
-        loader: () => fetch("Campaigns.json"),
+        loader: () => fetch("/Campaigns.json"),
+        element: <Private><Donations></Donations></Private>,
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
-        loader:() => fetch("Campaigns.json")
+        element: <Private><Details></Details></Private>,
+        loader:() => fetch("/Campaigns.json")
       },
       {
         path:'/donate-form',
-        element: <DonateForm></DonateForm>
+        element: <Private><DonateForm></DonateForm></Private>,
       },
       {
         path:'/auth/register',
