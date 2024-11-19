@@ -1,19 +1,28 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/Provider";
 
 const Navbar = () => {
+  const { user, userLogout} = useContext(AuthContext);
+  console.log(user);
   const Links = (
     <>
-      <Link className="btn btn-ghost lg:text-lg font-medium mr-2">Home</Link>
+      <Link to={"/"} className="btn btn-ghost lg:text-base font-medium mr-2">
+        Home
+      </Link>
 
-      <Link className="btn btn-ghost lg:text-lg font-medium mr-2">
+      <Link
+        to={"/donation-campaigns"}
+        className="btn btn-ghost lg:text-base font-medium mr-2"
+      >
         Donation Campaigns
       </Link>
 
-      <Link className="btn btn-ghost lg:text-lg font-medium mr-2">
+      <Link className="btn btn-ghost lg:text-base font-medium mr-2">
         How to Help
       </Link>
 
-      <Link className="btn btn-ghost lg:text-lg font-medium mr-2">
+      <Link className="btn btn-ghost lg:text-base font-medium mr-2">
         Dashboard
       </Link>
     </>
@@ -52,7 +61,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <p>{user?.email}</p>
+          {
+            user && user.email? <a onClick={userLogout} className="btn">logout</a> : <Link to={'/auth/login'} className="btn">Login</Link>
+          }
+          
         </div>
       </div>
     </div>
