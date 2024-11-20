@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="flex flex-col md:flex-row gap-4 lg:py-12 py-8 px-4 ">
       {/* banner content */}
-      <div className="flex flex-col justify-center text-center md:text-start lg:space-y-4 space-y-1 ">
+      <div className="flex flex-col justify-center text-center md:text-start lg:space-y-4 space-y-3" data-aos="fade-up" data-aos-duration="2000">
         <h1 className="md:text-6xl text-3xl font-bold text-slate-700">
           Wrap Someone in Warmth This{" "}
           <span className="text-sky-500">Winter</span>
@@ -26,7 +26,7 @@ const Banner = () => {
         </div>
       </div>
       {/* banner slider */}
-      <div className="md:w-1/2 w-full">
+      <div className="md:w-1/2 w-full" data-aos="zoom-in" data-aos-duration="3000" >
         <Slider></Slider>
       </div>
     </div>

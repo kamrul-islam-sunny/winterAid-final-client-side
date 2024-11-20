@@ -13,7 +13,8 @@ const ForgetPass = () => {
         const email = e.target.inputEmail.value;
         userForgePassword(email)
         .then(()=>{
-         
+          window.open("https://mail.google.com/mail/u/0/#inbox", "_blank")
+          e.target.reset()
         })
         .catch(error =>{
             toast.error(error.message)

@@ -7,7 +7,12 @@ const About = () => {
         About Us
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-14 px-4">
-        <div className="p-6 max-w-xl md:mx-auto border rounded-xl space-y-2 shadow-lg shadow-sky-200">
+        <div
+          className="p-6 max-w-xl md:mx-auto border rounded-xl space-y-2 shadow-lg shadow-sky-200"
+          data-aos="fade-up"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1500"
+        >
           <img className="size-20" src="../src/assets/target.png" alt="" />
           <h3 className="text-2xl font-bold text-slate-800">Our mission</h3>
           <p className="text-base font-normal text-slate-600">
@@ -16,7 +21,9 @@ const About = () => {
             everyone in need.
           </p>
         </div>
-        <div className="p-6 border rounded-xl max-w-xl md:mx-auto space-y-2 shadow-lg shadow-sky-200">
+        <div className="p-6 border rounded-xl max-w-xl md:mx-auto space-y-2 shadow-lg shadow-sky-200 " data-aos="fade-up"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1500">
           <img
             className="size-20"
             src="../../src/assets/light-bulb.png"
@@ -29,7 +36,9 @@ const About = () => {
             generosity and need.
           </p>
         </div>
-        <div className="p-6 border rounded-xl max-w-xl md:mx-auto space-y-2 shadow-lg shadow-sky-200">
+        <div className="p-6 border rounded-xl max-w-xl md:mx-auto space-y-2 shadow-lg shadow-sky-200" data-aos="fade-up"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1500">
           <img
             className="size-20"
             src="../../src/assets/contribution.png"
@@ -37,7 +46,10 @@ const About = () => {
           />
           <h3 className="text-2xl font-bold text-slate-800">Contribution</h3>
           <p className="text-base font-normal text-slate-600">
-          Users can contribute by donating warm clothes, volunteering to distribute them, spreading awareness, and sharing feedback to improve the platform. Together, we can bring warmth to those in need.
+            Users can contribute by donating warm clothes, volunteering to
+            distribute them, spreading awareness, and sharing feedback to
+            improve the platform. Together, we can bring warmth to those in
+            need.
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ const OurVolunteer = () => {
         Our Volunteer
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-items-center gap-4 px-4 my-5 lg:px-0">
-        <div className="">
+        <div className="" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in">
           <img
             className="w-52 h-52 rounded-full  shadow-lg shadow-sky-300"
             src="https://static.vecteezy.com/system/resources/thumbnails/026/497/734/small_2x/businessman-on-isolated-png.png"
@@ -20,7 +20,7 @@ const OurVolunteer = () => {
             <p className="text-gray-600 font-bold">Volunteer</p>
           </div>
         </div>
-        <div className="">
+        <div className="" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in">
           <img
             className="rounded-full w-52 h-52 object-cover shadow-lg shadow-sky-300"
             src="https://t4.ftcdn.net/jpg/02/85/98/31/360_F_285983167_OTSjTSeRhqJ7b4TPxlQ80mC9zTiDCzMQ.jpg"
@@ -33,7 +33,7 @@ const OurVolunteer = () => {
             <p className="text-gray-600 font-bold">Volunteer</p>
           </div>
         </div>
-        <div className="">
+        <div className="" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in">
           <img
             className="rounded-full w-52 h-52 object-cover shadow-lg shadow-sky-300"
             src="https://img.freepik.com/premium-photo/young-handsome-man-isolated-white-background_185193-82024.jpg"
@@ -46,7 +46,7 @@ const OurVolunteer = () => {
             <p className="text-gray-600 font-bold">Volunteer</p>
           </div>
         </div>
-        <div className="">
+        <div className="" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in">
           <img
             className="rounded-full w-52 h-52 object-cover shadow-lg shadow-sky-300"
             src="https://t3.ftcdn.net/jpg/02/76/34/74/360_F_276347475_XLF6MQQ1hj85TN2TkfQtMPWju8a8Ktmh.jpg"

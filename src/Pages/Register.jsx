@@ -60,7 +60,7 @@ const Register = () => {
 }
   return (
     <div className="min-h-screen flex justify-center my-10 items-center ">
-      <div className="card bg-base-100 w-full max-w-lg rounded-lg p-10 shrink-0 shadow-2xl shadow-sky-300 border border-sky-200">
+      <div className="card bg-base-100 w-full md:max-w-lg max-w-sm rounded-lg py-10 shrink-0 shadow-2xl shadow-sky-300 border border-sky-200">
         <h2 className="text-2xl font-semibold text-center">
           Register your account
         </h2>

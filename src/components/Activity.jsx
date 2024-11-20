@@ -7,7 +7,12 @@ const Activity = () => {
         Our Activity
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
-        <div className="bg-white border shadow-lg max-w-xl md:mx-auto shadow-sky-200 rounded-xl">
+        <div
+          className="bg-white border shadow-lg max-w-xl md:mx-auto shadow-sky-200 rounded-xl "
+          data-aos="zoom-in-right"
+          data-aos-offset="100"
+          data-aos-duration="1500"
+        >
           <div className="">
             <img
               className="h-52 w-full object-cover rounded-tr-xl rounded-tl-xl"
@@ -31,7 +36,12 @@ const Activity = () => {
             </button>
           </div>
         </div>
-        <div className="bg-white shadow-lg shadow-sky-200 max-w-xl md:mx-auto rounded-xl">
+        <div
+          className="bg-white shadow-lg shadow-sky-200 max-w-xl md:mx-auto rounded-xl"
+          data-aos="zoom-out"
+          data-aos-offset="100"
+          data-aos-duration="1500"
+        >
           <div className="">
             <img
               className="h-52 w-full object-cover rounded-tr-xl rounded-tl-xl"
@@ -40,18 +50,27 @@ const Activity = () => {
             />
           </div>
           <div className="p-4 space-y-4">
-            <h1 className="text-2xl font-bold">
-            Winter Clothes Relief
-            </h1>
+            <h1 className="text-2xl font-bold">Winter Clothes Relief</h1>
             <p className="text-sm text-slate-600">
-            The winter season can be challenging in Bangladesh, especially for those who live in poverty and struggle to make ends meet. The harsh weather conditions often make it difficult for these individuals to afford warm clothing, putting them at risk of cold-related illnesses like hypothermia. That’s why the Baitun Noor Foundation is dedicated to providing winter clothes relief to those who need it most.......
+              The winter season can be challenging in Bangladesh, especially for
+              those who live in poverty and struggle to make ends meet. The
+              harsh weather conditions often make it difficult for these
+              individuals to afford warm clothing, putting them at risk of
+              cold-related illnesses like hypothermia. That’s why the Baitun
+              Noor Foundation is dedicated to providing winter clothes relief to
+              those who need it most.......
             </p>
             <button className="btn btn-ghost border-2 hover:bg-sky-500 hover:text-white border-sky-500 text-sky-500">
               Read Now
             </button>
           </div>
         </div>
-        <div className="bg-white shadow-lg shadow-sky-200 max-w-xl md:mx-auto rounded-xl">
+        <div
+          className="bg-white shadow-lg shadow-sky-200 max-w-xl md:mx-auto rounded-xl"
+          data-aos="zoom-in-left"
+          data-aos-offset="100"
+          data-aos-duration="1500"
+        >
           <div className="">
             <img
               className="h-52 w-full object-cover rounded-tr-xl rounded-tl-xl"
@@ -60,11 +79,15 @@ const Activity = () => {
             />
           </div>
           <div className="p-4 space-y-4">
-            <h1 className="text-2xl font-bold">
-            Bangladesh Winter Relief
-            </h1>
+            <h1 className="text-2xl font-bold">Bangladesh Winter Relief</h1>
             <p className="text-sm text-slate-600">
-            The Winter Relief Fund was created to provide financial assistance to families in need. Winter can be a terrifying time, for those less fortunate. Many have to live with without food, shelter, water already. Add the harsh weathers in winter and it makes their life even harder. We want to alleviate any stress that we can, please donate to the Winter Relief Fund and provide some much needed warmth in their hard times......
+              The Winter Relief Fund was created to provide financial assistance
+              to families in need. Winter can be a terrifying time, for those
+              less fortunate. Many have to live with without food, shelter,
+              water already. Add the harsh weathers in winter and it makes their
+              life even harder. We want to alleviate any stress that we can,
+              please donate to the Winter Relief Fund and provide some much
+              needed warmth in their hard times......
             </p>
             <button className="btn btn-ghost border-2 hover:bg-sky-500 hover:text-white border-sky-500 text-sky-500">
               Read Now

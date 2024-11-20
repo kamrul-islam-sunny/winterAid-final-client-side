@@ -18,15 +18,15 @@ const Donation = ({cam}) => {
           {title}
           </h1>
           <p className="text-sm font-medium text-gray-500">
-          {description && description.slice(0,35)}....
+          {description && description.slice(0,50)}....
           </p>
           <div className="flex items-center">
             <span className="text-2xl text-sky-500"><IoLocationSharp/> </span>
           <p className="text-base text-slate-500 font-semibold ">Division: <span className="text-xl text-slate-800">{division}</span></p>
           </div>
-          <div className="flex justify-between py-2">
+          <div className="flex justify-between items-center  py-2">
             <img className="size-10" src="../../src/assets/donate.png" alt="" />
-            <Link to={`/details/${id}`} className="btn btn-ghost border hover:border-sky-500 text-xl bg-sky-500 hover:bg-transparent text-white hover:text-slate-900">
+            <Link to={`/details/${id}`} className="btn  btn-ghost border hover:border-sky-500 text-xl bg-sky-500 hover:bg-transparent text-white hover:text-slate-900">
               Details
             </Link>
           </div>
