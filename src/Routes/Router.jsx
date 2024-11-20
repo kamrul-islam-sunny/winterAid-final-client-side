@@ -9,16 +9,13 @@ import Login from "../Pages/Login";
 import Private from "../private/Private";
 import Dashboard from "../Pages/Dashboard";
 import UpdateForm from "../Pages/UpdateForm";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement: (
-      <h1 className="text-5xl text-center text-rose-600 py-10">
-        Page is not found.
-      </h1>
-    ),
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

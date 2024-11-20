@@ -36,12 +36,12 @@ const Login = () => {
         })
     }
     return (
-        <div onSubmit={handleForm} className="min-h-screen flex justify-center items-center ">
+        <div className="min-h-screen flex justify-center items-center ">
         <div className="card bg-base-100 w-full max-w-lg rounded-lg p-10 shrink-0 shadow-2xl shadow-sky-300 border border-sky-200">
           <h2 className="text-2xl font-semibold text-center">
             Login your account
           </h2>
-          <form  className="card-body">
+          <form onSubmit={handleForm}  className="card-body">
             <div className="form-control ">
               <label className="label">
                 <span className="label-text">Email</span>

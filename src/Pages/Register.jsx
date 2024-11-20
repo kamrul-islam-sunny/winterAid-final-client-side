@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/Provider";
 import toast from "react-hot-toast";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Register = () => {
     const {userRegister, UpdateUserProfile} = useContext(AuthContext)
     const navigate = useNavigate()
+    const [show, setShow] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault();
         // get from data
@@ -92,6 +94,7 @@ const Register = () => {
               className="input input-bordered"
               required
             />
+              <span><IoMdEyeOff/></span>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-ghost bg-sky-500  text-white hover:text-slate-950">Register</button>
