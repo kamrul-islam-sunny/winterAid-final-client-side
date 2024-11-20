@@ -26,7 +26,7 @@ const Donation = ({cam}) => {
           <div className="flex justify-between items-center  py-2">
             <img className="size-10" src="/assets/donate.png" alt="" />
             <Link to={`/details/${id}`} className="btn  btn-ghost border hover:border-sky-500 text-xl bg-sky-500 hover:bg-transparent text-white hover:text-slate-900">
-              Details
+            Donate Now
             </Link>
           </div>
         </div>

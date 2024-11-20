@@ -31,9 +31,9 @@ const Register = () => {
 
     userRegister(email, password)
       .then((result) => {
+        navigate('/');
         UpdateUserProfile({ displayName: name, photoURL: photo })
           .then((result) => {
-            navigate("/");
             // console.log(result);
           })
           .catch((error) => {

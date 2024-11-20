@@ -8,8 +8,8 @@ const DonateForm = () => {
       toast.success('Thank you ! We will reach your destination soon.🎁💝')
   }
   return (
-    <div onSubmit={handleForm} className="card bg-base-100 w-full my-10 md:max-w-xl  mx-auto shrink-0 shadow-2xl shadow-sky-200 border border-sky-300 rounded-lg ">
-      <form className="card-body">
+    <div onSubmit={handleForm}>
+      <form className="card-body pt-4 pb-8">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Quantity of items</span>
@@ -44,7 +44,7 @@ const DonateForm = () => {
           />
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Donate</button>
+          <button className="btn btn-ghost bg-sky-500">Donate</button>
         </div>
       </form>
     </div>

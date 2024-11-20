@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FcBusinessContact } from "react-icons/fc";
+import DonateForm from "./DonateForm";
 
 const Details = () => {
   const { id } = useParams();
@@ -12,11 +13,12 @@ const Details = () => {
   }, [data, singleData]);
   const { title, image, status, description, contactInfo } = singleData;
   return (
-    <div className="card bg-base-100  max-w-3xl md:mx-auto my-10 mx-4 shadow-lg shadow-sky-300">
+    <div className="">
+      <div className="card bg-base-100  max-w-3xl md:mx-auto my-10 mx-4 shadow-2xl shadow-sky-200">
       <figure>
         <img src={image} alt="Shoes" />
       </figure>
-      <div className="card-body">
+      <div className="card-body pb-2">
         <h2 className="card-title">
           {title}
           <div className="badge badge-success py-4 text-white">{status}</div>
@@ -28,12 +30,11 @@ const Details = () => {
           </span>{" "}
           {contactInfo}
         </p>
-        <div className="card-actions justify-end">
-          <Link to={"/donate-form"} className="btn btn-primary">
-            Donate Now
-          </Link>
-        </div>
       </div>
+      {/* Donate component */}
+      <DonateForm></DonateForm>
+    </div>
+  
     </div>
   );
 };

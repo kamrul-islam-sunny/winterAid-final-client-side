@@ -15,14 +15,16 @@ const Home = () => {
       {/* About section */}
       <About></About>
 
+       {/* How it is work */}
+       <HowIt></HowIt>
+
       {/* Our Volunteer  */}
       <OurVolunteer></OurVolunteer>
 
       {/* Our sponsor */}
       <Activity></Activity>
 
-      {/* How it is work */}
-      <HowIt></HowIt>
+     
     </div>
   );
 };
