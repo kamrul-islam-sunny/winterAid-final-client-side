@@ -10,6 +10,7 @@ import Private from "../private/Private";
 import Dashboard from "../Pages/Dashboard";
 import UpdateForm from "../Pages/UpdateForm";
 import ErrorPage from "../Pages/ErrorPage";
+import ForgetPass from "../Pages/ForgetPass";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/update-profile',
         element: <Private><UpdateForm></UpdateForm></Private>
+      },
+      {
+        path: '/forgetPassword',
+        element: <ForgetPass></ForgetPass>
       }
     ],
   },

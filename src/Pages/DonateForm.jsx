@@ -8,7 +8,7 @@ const DonateForm = () => {
       toast.success('Thank you ! We will reach your destination soon.🎁💝')
   }
   return (
-    <div onSubmit={handleForm} className="card bg-base-100 w-full my-10 max-w-xl mx-auto shrink-0 shadow-2xl shadow-sky-200 border border-sky-300 rounded-lg">
+    <div onSubmit={handleForm} className="card bg-base-100 w-full my-10 md:max-w-xl  mx-auto shrink-0 shadow-2xl shadow-sky-200 border border-sky-300 rounded-lg ">
       <form className="card-body">
         <div className="form-control">
           <label className="label">

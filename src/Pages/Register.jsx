@@ -4,9 +4,11 @@ import { AuthContext } from "../Provider/Provider";
 import toast from "react-hot-toast";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoEye } from "react-icons/io5";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-  const { userRegister, UpdateUserProfile } = useContext(AuthContext);
+  const { userRegister, UpdateUserProfile, userGoogleLogin } =
+    useContext(AuthContext);
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleShowPass = () => setShow(!show);
@@ -42,7 +44,20 @@ const Register = () => {
         toast.error(err.message);
         console.log(err.message);
       });
+
   };
+
+  const handleGoogleSignIn = ()=>{
+    userGoogleLogin()
+    .then(result =>{
+        navigate(location?.state ? location.state : '/')
+        console.log(result.user)
+    })
+    .catch(err =>{
+        toast.error(err.message)
+        console.log(err.message)
+    })
+}
   return (
     <div className="min-h-screen flex justify-center my-10 items-center ">
       <div className="card bg-base-100 w-full max-w-lg rounded-lg p-10 shrink-0 shadow-2xl shadow-sky-300 border border-sky-200">
@@ -91,17 +106,17 @@ const Register = () => {
               <span className="label-text">Password</span>
             </label>
             <input
-              type={show?"text":"password"}
+              type={show ? "text" : "password"}
               name="password"
               placeholder="password"
               className="input input-bordered"
               required
             />
-            <a onClick={handleShowPass}
-              className="text-xl cursor-pointer absolute top-12 right-5">
-              {
-                show? <IoEye/> : <IoMdEyeOff />
-              }
+            <a
+              onClick={handleShowPass}
+              className="text-xl cursor-pointer absolute top-12 right-5"
+            >
+              {show ? <IoEye /> : <IoMdEyeOff />}
             </a>
           </div>
           <div className="form-control mt-6">
@@ -116,6 +131,12 @@ const Register = () => {
             Login
           </Link>
         </h2>
+        <button onClick={handleGoogleSignIn} className="btn w-56 mx-auto mt-4">
+          <span className="text-2xl">
+            <FcGoogle />
+          </span>
+          Register with Google
+        </button>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/Provider";
 
 const Navbar = () => {
-  const { user, userLogout} = useContext(AuthContext);
+  const { user, userLogout } = useContext(AuthContext);
   console.log(user);
   const Links = (
     <>
@@ -22,7 +22,10 @@ const Navbar = () => {
         How to Help
       </Link>
 
-      <Link to={'/dashboard'} className="btn btn-ghost lg:text-base font-medium mr-2">
+      <Link
+        to={"/dashboard"}
+        className="btn btn-ghost lg:text-base font-medium mr-2"
+      >
         Dashboard
       </Link>
     </>
@@ -61,11 +64,22 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
         <div className="navbar-end">
-          <p>{user?.email}</p>
-          {
-            user && user.email? <a onClick={userLogout} className="btn">logout</a> : <Link to={'/auth/login'} className="btn">Login</Link>
-          }
-          
+          {user && user.email ? (
+            <>
+              <div className="avatar online">
+                <div className="w-10 rounded-full">
+                  <img src={user?.photoURL} />
+                </div>
+              </div>
+              <button onClick={userLogout}  className="btn ml-4">
+                logout
+              </button>
+            </>
+          ) : (
+            <Link to={"/auth/login"} className="btn">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
