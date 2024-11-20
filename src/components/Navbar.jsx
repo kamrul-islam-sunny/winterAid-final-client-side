@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/Provider";
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const Links = (
     <>
       <Link to={"/"} className="btn btn-ghost lg:text-base font-medium mr-2">
@@ -58,7 +58,7 @@ const Navbar = () => {
               {Links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"><img  className= "size-12" src="../../src/assets/logo.png" alt="" /></a>
+          <a className="btn btn-ghost text-xl"><img  className= "size-12" src="/assets/logo.png" alt="" /></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>

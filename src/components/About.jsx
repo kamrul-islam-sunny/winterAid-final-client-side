@@ -13,7 +13,7 @@ const About = () => {
           data-aos-easing="ease-in-sine"
           data-aos-duration="1500"
         >
-          <img className="size-20" src="../src/assets/target.png" alt="" />
+          <img className="size-20" src="/assets/target.png" alt="" />
           <h3 className="text-2xl font-bold text-slate-800">Our mission</h3>
           <p className="text-base font-normal text-slate-600">
             To connect donors with volunteers, providing winter clothing to
@@ -26,7 +26,7 @@ const About = () => {
           data-aos-duration="1500">
           <img
             className="size-20"
-            src="../../src/assets/light-bulb.png"
+            src="/assets/light-bulb.png"
             alt=""
           />
           <h3 className="text-2xl font-bold text-slate-800">Our vision</h3>
@@ -41,7 +41,7 @@ const About = () => {
           data-aos-duration="1500">
           <img
             className="size-20"
-            src="../../src/assets/contribution.png"
+            src="/assets/contribution.png"
             alt=""
           />
           <h3 className="text-2xl font-bold text-slate-800">Contribution</h3>

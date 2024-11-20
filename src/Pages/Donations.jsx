@@ -4,7 +4,7 @@ import Donation from "../components/Donation";
 
 const Donations = () => {
   const data = useLoaderData() || [];
-  console.log(data);
+  // console.log(data);
   return (
     <div className="max-w-6xl mx-auto">
       <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold text-slate-800 text-center md:py-12 py-4">

@@ -1,8 +1,33 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# WinterAid
 
-Currently, two official plugins are available:
+The purpose of the Winter Donation web application is to facilitate the donation of winter clothing to those in need across Bangladesh. It aims to connect generous donors with volunteers who can distribute the clothing to vulnerable individuals, especially in rural and low-income areas. The platform makes it easy for users to contribute by browsing campaigns and submitting their donations through a simple form.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Live Link
+
+Here is Live Link projects
+
+[WinterAid](https://tangerine-kleicha-177215.netlify.app/)
+
+https://tangerine-kleicha-177215.netlify.app/
+## Features
+
+- SignIn and SignUp and logout.
+- Google SingIn.
+- Update User Profile.
+- User ForGet Password.
+- All Donation Campaigns 
+- Donate To Any Campaigns.
+- Somooth Animation and simple Design.
+- Responsice Design.
+
+## npm package 
+
+- React Icons
+- aos Animation package
+- react-router-dom
+- firebase
+- react hot toast
+- Tailwwind
+- DaisyUi

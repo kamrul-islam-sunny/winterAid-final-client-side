@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Donation = ({cam}) => {
     const {id, title, description, image, division } = cam;
-    console.log(cam);
   return (
     <div className="md:w-[600px] lg:w-full mx-auto">
       <div className="flex md:items-center md:flex-row flex-col gap-4 border p-4 mx-4 md:mx-0 rounded-xl">
@@ -25,7 +24,7 @@ const Donation = ({cam}) => {
           <p className="text-base text-slate-500 font-semibold ">Division: <span className="text-xl text-slate-800">{division}</span></p>
           </div>
           <div className="flex justify-between items-center  py-2">
-            <img className="size-10" src="../../src/assets/donate.png" alt="" />
+            <img className="size-10" src="/assets/donate.png" alt="" />
             <Link to={`/details/${id}`} className="btn  btn-ghost border hover:border-sky-500 text-xl bg-sky-500 hover:bg-transparent text-white hover:text-slate-900">
               Details
             </Link>

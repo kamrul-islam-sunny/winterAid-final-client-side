@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="pt-4 mx-4 lg:mx-0">
       <footer className="border rounded-tr-xl rounded-tl-xl footer text-base-content p-10 max-w-6xl mx-auto">
         <aside className="">
-          <img className="size-40" src="../../src/assets/logo.png" alt="" />
+          <img className="size-40" src="/assets/logo.png" alt="" />
           <p className="text-base font-normal">WInterAid Foundation.</p>
         </aside>
         <nav>

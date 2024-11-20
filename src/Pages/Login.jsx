@@ -20,22 +20,22 @@ const Login = () => {
         
         .then(result =>{
             navigate(location?.state ? location.state : '/')
-            console.log(result.user)
+            // console.log(result.user)
         })
         .catch(err =>{
             toast.error(err.message)
-            console.log(err.message)
+            // console.log(err.message)
         })
     }
     const handleGoogleSignIn = ()=>{
         userGoogleLogin()
         .then(result =>{
             navigate(location?.state ? location.state : '/')
-            console.log(result.user)
+            // console.log(result.user)
         })
         .catch(err =>{
             toast.error(err.message)
-            console.log(err.message)
+            // console.log(err.message)
         })
     }
     

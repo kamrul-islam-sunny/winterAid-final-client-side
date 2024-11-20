@@ -34,7 +34,7 @@ const Register = () => {
         UpdateUserProfile({ displayName: name, photoURL: photo })
           .then((result) => {
             navigate("/");
-            console.log(result);
+            // console.log(result);
           })
           .catch((error) => {
             toast.error(error.message);
@@ -42,7 +42,7 @@ const Register = () => {
       })
       .catch((err) => {
         toast.error(err.message);
-        console.log(err.message);
+        // console.log(err.message);
       });
 
   };
@@ -51,11 +51,11 @@ const Register = () => {
     userGoogleLogin()
     .then(result =>{
         navigate(location?.state ? location.state : '/')
-        console.log(result.user)
+        // console.log(result.user)
     })
     .catch(err =>{
         toast.error(err.message)
-        console.log(err.message)
+        // console.log(err.message)
     })
 }
   return (

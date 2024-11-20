@@ -12,7 +12,7 @@ const UpdateForm = () => {
     UpdateUserProfile({ displayName: name, photoURL: photo })
       .then((result) => {
         navigate("/dashboard");
-        console.log(result);
+        // console.log(result);
       })
       .catch((error) => {
         toast.error(error.message);
