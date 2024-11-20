@@ -4,7 +4,7 @@ import { FaTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="pt-4 mx-4 lg:mx-0">
+    <div className="pt-4 mx-4 md:mx-2 ">
       <footer className="border-2 rounded-tr-xl rounded-tl-xl footer text-base-content p-10 max-w-6xl mx-auto">
         <aside className="">
           <img className="size-40" src="/assets/logo.png" alt="" />

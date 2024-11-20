@@ -6,7 +6,7 @@ const Dashboard = () => {
   const { user } = useContext(AuthContext);
   return (
     <div className="flex flex-col items-center  min-h-screen">
-        <h1 className="text-4xl text-slate-700 font-bold py-10">
+        <h1 className="md:text-4xl text-2xl text-slate-700 font-bold py-10">
           Welcome, <span className="text-sky-500">{user?.email}</span>
         </h1>
       <div className="card bg-base-100 border w-full max-w-sm  shadow-xl shadow-gray-300">
