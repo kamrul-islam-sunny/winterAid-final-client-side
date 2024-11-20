@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAMxkNO3Bsj1jbMYL5Xq86OAzMLIJSFax0",
-  authDomain: "winteraid-project.firebaseapp.com",
-  projectId: "winteraid-project",
-  storageBucket: "winteraid-project.firebasestorage.app",
-  messagingSenderId: "603949816912",
-  appId: "1:603949816912:web:9ea37a6f3f2d750de4c555"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

@@ -18,7 +18,7 @@ const Navbar = () => {
         Donation Campaigns
       </Link>
 
-      <Link className="btn btn-ghost lg:text-base font-medium mr-2">
+      <Link to={'/'} className="btn btn-ghost lg:text-base font-medium mr-2">
         How to Help
       </Link>
 
