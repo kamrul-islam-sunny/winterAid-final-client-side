@@ -31,3 +31,5 @@ https://tangerine-kleicha-177215.netlify.app/
 - react hot toast
 - Tailwwind
 - DaisyUi
+
+![Logo](https://i.ibb.co.com/6N5q78F/logo.png)
