@@ -3,43 +3,46 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/Provider";
 import toast from "react-hot-toast";
 import { IoMdEyeOff } from "react-icons/io";
+import { IoEye } from "react-icons/io5";
 
 const Register = () => {
-    const {userRegister, UpdateUserProfile} = useContext(AuthContext)
-    const navigate = useNavigate()
-    const [show, setShow] = useState(false)
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // get from data
-        const from = new FormData(e.target);
-        const name = from.get("name");
-        const photo = from.get("photo");
-        const email = from.get("email");
-        const password = from.get("password");
-        const passRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+  const { userRegister, UpdateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+  const handleShowPass = () => setShow(!show);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // get from data
+    const from = new FormData(e.target);
+    const name = from.get("name");
+    const photo = from.get("photo");
+    const email = from.get("email");
+    const password = from.get("password");
+    const passRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
-        if(!passRegex.test(password))
-        {
-            toast.error('Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long.')
-            return
-        }
+    if (!passRegex.test(password)) {
+      toast.error(
+        "Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long."
+      );
+      return;
+    }
 
-        userRegister(email, password)
-        .then(result => {
-            UpdateUserProfile({displayName: name, photoURL:photo})
-            .then(result =>{
-              navigate('/')
-              console.log(result)
-            })
-            .catch((error) => {
-              toast.error(error.message)
-            })
-        })
-        .catch(err =>{
-            toast.error(err.message)
-            console.log(err.message)
-        })
-      };
+    userRegister(email, password)
+      .then((result) => {
+        UpdateUserProfile({ displayName: name, photoURL: photo })
+          .then((result) => {
+            navigate("/");
+            console.log(result);
+          })
+          .catch((error) => {
+            toast.error(error.message);
+          });
+      })
+      .catch((err) => {
+        toast.error(err.message);
+        console.log(err.message);
+      });
+  };
   return (
     <div className="min-h-screen flex justify-center my-10 items-center ">
       <div className="card bg-base-100 w-full max-w-lg rounded-lg p-10 shrink-0 shadow-2xl shadow-sky-300 border border-sky-200">
@@ -83,21 +86,28 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+              type={show?"text":"password"}
               name="password"
               placeholder="password"
               className="input input-bordered"
               required
             />
-              <span><IoMdEyeOff/></span>
+            <a onClick={handleShowPass}
+              className="text-xl cursor-pointer absolute top-12 right-5">
+              {
+                show? <IoEye/> : <IoMdEyeOff />
+              }
+            </a>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-ghost bg-sky-500  text-white hover:text-slate-950">Register</button>
+            <button className="btn btn-ghost bg-sky-500  text-white hover:text-slate-950">
+              Register
+            </button>
           </div>
         </form>
         <h2 className="font-normal text-center">
