@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/Provider";
 import toast from "react-hot-toast";
 
 const Register = () => {
-    const {userRegister} = useContext(AuthContext)
+    const {userRegister, UpdateUserProfile} = useContext(AuthContext)
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,8 +24,14 @@ const Register = () => {
 
         userRegister(email, password)
         .then(result => {
-            navigate('/')
-            console.log(result)
+            UpdateUserProfile({displayName: name, photoURL:photo})
+            .then(result =>{
+              navigate('/')
+              console.log(result)
+            })
+            .catch((error) => {
+              toast.error(error.message)
+            })
         })
         .catch(err =>{
             toast.error(err.message)

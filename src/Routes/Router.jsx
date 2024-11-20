@@ -7,6 +7,8 @@ import DonateForm from "../Pages/DonateForm";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import Private from "../private/Private";
+import Dashboard from "../Pages/Dashboard";
+import UpdateForm from "../Pages/UpdateForm";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
       {
         path:'/auth/login',
         element:<Login></Login>
+      },
+      {
+        path: '/dashboard',
+        element: <Private><Dashboard></Dashboard></Private>,
+      },
+      {
+        path: '/update-profile',
+        element: <Private><UpdateForm></UpdateForm></Private>
       }
     ],
   },

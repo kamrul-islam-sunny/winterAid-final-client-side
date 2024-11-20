@@ -22,7 +22,7 @@ const Navbar = () => {
         How to Help
       </Link>
 
-      <Link className="btn btn-ghost lg:text-base font-medium mr-2">
+      <Link to={'/dashboard'} className="btn btn-ghost lg:text-base font-medium mr-2">
         Dashboard
       </Link>
     </>
