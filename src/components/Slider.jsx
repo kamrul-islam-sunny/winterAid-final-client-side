@@ -59,7 +59,7 @@ const Slider = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <div className="absolute inset-0 bg-black opacity-50 z-20 rounded-xl"></div>
+      <div className="absolute inset-0 bg-black opacity-30 z-20 rounded-xl"></div>
     </div>
   );
 };

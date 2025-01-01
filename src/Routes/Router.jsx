@@ -11,6 +11,11 @@ import Dashboard from "../Pages/Dashboard";
 import UpdateForm from "../Pages/UpdateForm";
 import ErrorPage from "../Pages/ErrorPage";
 import ForgetPass from "../Pages/ForgetPass";
+import AddCampaigns from "../Pages/add_campain/AddCampaigns";
+import MyCampaigns from "../Pages/MyCampaigns/MyCampaigns";
+import DonationHistory from "../Pages/DonationHistory/DonationHistory";
+import DonarList from "../Pages/Donar/DonarList";
+import UpdateCampaign from "../Pages/updatePage/UpdateCampaign";
 
 const router = createBrowserRouter([
   {
@@ -23,14 +28,14 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/donation-campaigns",
-        loader: () => fetch("/Campaigns.json"),
+        path: "/donation-campaigns",  
         element: <Donations></Donations>,
       },
       {
-        path: "/details/:id",
+        path: "/campaignDetail/:id",
         element: <Private><Details></Details></Private>,
-        loader:() => fetch("/Campaigns.json")
+        loader:({params}) => fetch(`https://backend-winter-aid.vercel.app
+/campaign/${params.id}`)
       },
       {
         path:'/auth/register',
@@ -51,7 +56,30 @@ const router = createBrowserRouter([
       {
         path: '/forgetPassword',
         element: <ForgetPass></ForgetPass>
-      }
+      },
+      // ! add my final project 
+      {
+        path: '/add-campaign',
+        element: <Private><AddCampaigns></AddCampaigns></Private>
+      },
+      {
+        path: '/myCampaigns',
+        element: <Private><MyCampaigns></MyCampaigns></Private> 
+      },
+      {
+        path: '/DonationHistory',
+        element: <Private><DonationHistory></DonationHistory></Private> 
+      },
+      {
+        path: '/DonarList/:id',
+        element: <DonarList></DonarList>
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateCampaign></UpdateCampaign>,
+        loader: ({params})=> fetch(`https://backend-winter-aid.vercel.app
+/campaign/${params.id}`)
+      },
     ],
   },
   {

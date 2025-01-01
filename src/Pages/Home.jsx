@@ -5,6 +5,8 @@ import OurVolunteer from "../components/OurVolunteer";
 import Activity from "../components/Activity";
 import HowIt from "../components/HowIt";
 import Footer from "../components/Footer";
+import HomeCampaign from "../components/homepageCampaign/HomeCampaign";
+import HowItIs from "../components/HowItIs";
 
 const Home = () => {
   return (
@@ -12,11 +14,15 @@ const Home = () => {
       {/* banner section */}
       <Banner></Banner>
 
+      <HomeCampaign></HomeCampaign>
+
       {/* About section */}
       <About></About>
 
        {/* How it is work */}
        <HowIt></HowIt>
+
+       
 
       {/* Our Volunteer  */}
       <OurVolunteer></OurVolunteer>

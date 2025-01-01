@@ -18,16 +18,18 @@ const Navbar = () => {
         Donation Campaigns
       </Link>
 
-      <Link to={'/'} className="btn btn-ghost lg:text-base font-medium mr-2">
+      <Link to={"/"} className="btn btn-ghost lg:text-base font-medium mr-2">
         How to Help
       </Link>
 
-      <Link
-        to={"/dashboard"}
-        className="btn btn-ghost lg:text-base font-medium mr-2"
-      >
-        Dashboard
-      </Link>
+      {user?.email === "log@gmail.com" && (
+        <Link
+          to={"/add-campaign"}
+          className="btn btn-ghost lg:text-base font-medium mr-2"
+        >
+          Add campaign
+        </Link>
+      )}
     </>
   );
   return (
@@ -58,7 +60,9 @@ const Navbar = () => {
               {Links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"><img  className= "size-12" src="/assets/logo.png" alt="" /></a>
+          <a className="btn btn-ghost text-xl">
+            <img className="size-12" src="/assets/logo.png" alt="" />
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>
@@ -66,12 +70,46 @@ const Navbar = () => {
         <div className="navbar-end">
           {user && user.email ? (
             <>
-              <div className="avatar online">
+              {/* <div className="avatar online">
                 <div className="w-10 rounded-full">
                   <img src={user?.photoURL} />
                 </div>
+              </div> */}
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src={user?.photoURL}
+                    />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                >
+                  <li>
+                    <Link to={"/dashboard"} className="">
+                    Profile
+                    <span className="badge">New</span>
+                    </Link>
+                  </li>
+                  {user?.email === "log@gmail.com" && (
+                    <li>
+                      <Link to={"/myCampaigns"}>Manage My Campaign</Link>
+                    </li>
+                  )}
+
+                  <li>
+                    <Link to={"/DonationHistory"}>Donation History</Link>
+                  </li>
+                </ul>
               </div>
-              <button onClick={userLogout}  className="btn ml-4">
+              <button onClick={userLogout} className="btn ml-4">
                 logout
               </button>
             </>
