@@ -2,7 +2,7 @@
 
 Here is an image from my project:
 
-![Project Image]([https://raw.githubusercontent.com/your-username/your-repository/main/images/project-image.jpg](https://github.com/kamrul-islam-sunny/winterAid-final-client-side/blob/main/image.png?raw=true))
+![Project Image](https://github.com/kamrul-islam-sunny/winterAid-final-client-side/blob/main/image.png?raw=true)
 
 # WinterAid
 
