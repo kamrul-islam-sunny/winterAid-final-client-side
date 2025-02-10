@@ -2,7 +2,7 @@
 
 The purpose of **WinterAid** web application is to facilitate the donation of winter clothing to those in need across Bangladesh. It connects generous donors with volunteers who can distribute the clothing to vulnerable individuals, especially in rural and low-income areas. The platform makes it easy for users to contribute by browsing campaigns and submitting their donations through a simple form.
 
-![Logo](https://i.ibb.co/com/6N5q78F/logo.png)
+![Logo](https://i.ibb.co.com/6N5q78F/logo.png)
 
 ## 🚀 **Live Site**
 
