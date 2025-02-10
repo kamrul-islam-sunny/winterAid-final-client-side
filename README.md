@@ -21,18 +21,19 @@ You can access the live project here:
 - **Smooth Animations**: Seamless animations and simple design for a user-friendly experience.
 - **Responsive Design**: Fully responsive layout optimized for both desktop and mobile devices.
 
-## 🛠️ **Technologies Used**
+---
 
-| Technology       | Description                                     | Icon                                                   |
-|------------------|-------------------------------------------------|--------------------------------------------------------|
-| **React**        | Frontend framework                              | ![React Icon](https://img.icons8.com/color/48/000000/react.png) |
-| **Firebase**     | Authentication and database                     | ![Firebase Icon](https://img.icons8.com/color/48/000000/firebase.png) |
-| **Tailwind CSS** | Utility-first CSS framework for styling         | ![Tailwind CSS Icon](https://img.icons8.com/color/48/000000/tailwindcss.png) |
-| **DaisyUI**      | Tailwind-based UI components                    | ![DaisyUI Icon](https://img.icons8.com/ios/50/000000/daisy-ui.png) |
-| **React Router** | For routing and navigation                      | ![React Router Icon](https://img.icons8.com/color/48/000000/react-router.png) |
-| **React Icons**  | Icon library for UI elements                    | ![React Icons Icon](https://img.icons8.com/ios/50/000000/react-icons.png) |
-| **AOS**          | Scroll animations for smooth transitions        | ![AOS Icon](https://img.icons8.com/ios/50/000000/aos.png) |
-| **React Hot Toast** | For showing toast notifications              | ![Toast Icon](https://img.icons8.com/ios/50/000000/toast.png) |
+## 🛠️ Technology Stack
+
+| Category           | Technologies Used                                               |
+| ------------------ | --------------------------------------------------------------- |
+| **Frontend**       |  React, Tailwind CSS, daisyui                                   |
+| **Backend**        | Nodejs, express,                                                |
+| **Database**       | mongodb                                                         |
+| **Authentication** | Firebase                                                        |
+| **Frontend-Hosting**        | firebase hosting                                                          |
+
+---
 
 ## 📦 **Dependencies**
 
@@ -43,6 +44,7 @@ You can access the live project here:
 - `react-hot-toast`
 - `tailwindcss`
 - `daisyui`
+
 
 ## 🛠️ **How to Run Locally**
 
