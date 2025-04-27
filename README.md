@@ -29,6 +29,55 @@ You can access the live project here:
 
 ---
 
+# 🧥 WinterAid Dashboard System
+
+The **WinterAid Dashboard** is a secure and powerful admin panel for managing winter donation campaigns across Bangladesh.
+
+---
+
+## 🔐 Access Control
+
+- Dashboard is **protected** with an **Admin Email** and **Password**.
+- Only authorized admin users can log in.
+- Normal users **cannot access** dashboard functionalities.
+
+---
+
+## 📊 Dashboard Features
+
+### 1. Campaign Management
+
+- View how many campaigns are currently **running**.
+- See **campaign details**, including:
+  - Number of **views** by users.
+  - Number of **donations** received per campaign.
+
+### 2. Campaign Actions
+
+- **Update** campaign information (title, description, etc.).
+- **Delete** unwanted or completed campaigns.
+- **Modify** active campaigns anytime.
+
+### 3. Donation Tracking
+
+- View the **total amount** of money donated to each campaign.
+- See **individual user donation records** (who donated and how much).
+
+### 4. User Activity Monitoring
+
+- Track which users have interacted with which campaigns.
+- See engagement statistics easily.
+
+---
+
+## 🛡️ Security Highlights
+
+- Only verified admin can perform sensitive operations.
+- Dashboard routes are **protected** and **restricted**.
+
+---
+
+
 ## 🛠️ Technology Stack
 
 | Category           | Technologies Used                                               |
