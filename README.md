@@ -41,7 +41,7 @@ The **WinterAid Dashboard** is a secure and powerful admin panel for managing wi
 - Only authorized admin users can log in.
 - Normal users **cannot access** dashboard functionalities.
 - email: log@email.com
-- 123asd
+- PassWord: 123asd
 
 ---
 
